@@ -1,0 +1,120 @@
+{
+  "theme": "Dark",
+  "archetype": "Archetype 5 (Jewel & Luxury) with Terminal/Aceternity elements for a futuristic AI feel",
+  "brand": {
+    "name": "CareerAI",
+    "tone": "Intelligent, precise, empowering, futuristic but professional",
+    "core_concept": "A deep-tech command center for your career trajectory"
+  },
+  "typography": {
+    "headings": {
+      "family": "Outfit",
+      "weights": ["400", "700"],
+      "usage": "Use 'tracking-tight' for all headings. Never center by default. Use fluid scaling."
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "weights": ["400", "500"],
+      "usage": "Use loose line height 'leading-relaxed' for readability."
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "usage": "For data metrics, scores, confidence percentages, and AI explanations to add a technical feel."
+    }
+  },
+  "colors": {
+    "background": {
+      "main": "#05050A",
+      "surface": "#111116",
+      "surface_glass": "rgba(17, 17, 22, 0.7)"
+    },
+    "primary": {
+      "DEFAULT": "#F97316",
+      "hover": "#FB923C",
+      "glow": "rgba(249, 115, 22, 0.3)"
+    },
+    "secondary": {
+      "DEFAULT": "#007AFF",
+      "hover": "#3B82F6",
+      "glow": "rgba(0, 122, 255, 0.2)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#71717A"
+    },
+    "border": {
+      "default": "rgba(255, 255, 255, 0.08)",
+      "focus": "#F97316"
+    },
+    "status": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444"
+    }
+  },
+  "surfaces_and_textures": {
+    "header": "Crystal Glass: bg-[#05050A]/70 backdrop-blur-xl border-b border-white/10 shadow-sm",
+    "cards": "Solid dark surface bg-[#111116] border border-white/5 hover:border-white/10 transition-colors duration-300",
+    "ai_elements": "Tracing Beam effect: subtle gradient borders that appear active. Add drop-shadow-[0_0_8px_rgba(249,115,22,0.3)] on AI insights.",
+    "background_effect": "Subtle radial gradients in the background (deep blue/orange) to kill digital flatness without overwhelming the UI."
+  },
+  "layout_and_spacing": {
+    "marketing_pages": "Mode A: The Tetris Grid. Asymmetrical Bento grids. Use generous padding p-12 to p-24.",
+    "dashboard": "Mode B: The Control Room Grid. grid-cols-1 md:grid-cols-4. gap-6. Strict hierarchy, every pixel utilized.",
+    "container_padding": "Cards must use p-6 or p-8 internally to prevent text collision."
+  },
+  "components_strategy": {
+    "buttons": "Primary CTA: bg-[#F97316] text-white font-semibold hover:bg-[#FB923C]. Secondary: border border-white/20 bg-transparent text-white hover:bg-white/5. All buttons MUST have data-testid.",
+    "forms": "Use Shadcn Form, Input, Select. Inputs should have bg-black/50 border-white/10 focus:border-[#F97316] focus:ring-1 focus:ring-[#F97316].",
+    "charts": "Recharts. Use RadarChart for Skill Gap. LineChart for user history. Stroke colors must match brand primary (#F97316) and secondary (#007AFF).",
+    "sliders": "Interactive sliders for logical/creativity inputs. Thumb: #F97316, Track: #007AFF.",
+    "navigation": "Sticky top nav with Glassmorphism. Sidebar for Dashboard using 'Grid Borders' (border-r border-white/10) layout."
+  },
+  "motion_and_interactions": {
+    "hover": "Subtle lift (-translate-y-1) for cards. Text colors explicitly defined on hover.",
+    "page_transitions": "Framer motion fade and slight slide-up (y: 20 -> 0).",
+    "ai_loading": "Use an ASCII loader or glowing SVG pulse instead of standard spinners."
+  },
+  "icons": {
+    "library": "@phosphor-icons/react",
+    "style": "Duotone weight for high-end tech feel."
+  },
+  "media": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1762279389042-9439bfb6c155?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkYXJrJTIwdGVjaCUyMGFic3RyYWN0fGVufDB8fHx8MTc3NDgwMzg3OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract neon lines forming a digital landscape. Apply a strong black overlay (bg-black/60) to ensure text readability.",
+      "category": "hero_section"
+    },
+    "dashboard_empty_state": {
+      "url": "https://images.unsplash.com/photo-1772050138764-2b1925e0c6b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBkYXJrJTIwdGVjaCUyMGFic3RyYWN0fGVufDB8fHx8MTc3NDgwMzg3OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Wavy abstract lines. Use at very low opacity (10-15%) as a background texture for empty dashboard states.",
+      "category": "background_texture"
+    },
+    "student_learning": {
+      "url": "https://images.pexels.com/photos/4384147/pexels-photo-4384147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "A young man studying intensely at night. Use on the marketing page to ground the tech in human reality.",
+      "category": "marketing_feature"
+    }
+  },
+  "accessibility_and_testing": {
+    "contrast": "Ensure all text against dark surfaces meets minimum 4.5:1 ratio.",
+    "testing": "All interactive elements MUST include data-testid attribute in kebab-case representing the role (e.g., data-testid='submit-assessment-btn')."
+  },
+  "instructions_to_main_agent": [
+    "Use Tailwind CSS exclusively for styling.",
+    "Implement the UI using React, Shadcn UI, and Recharts.",
+    "Run `yarn add @phosphor-icons/react` for the icon library.",
+    "Strictly follow the color palette provided. Do not use default Vercel or Tailwind blue.",
+    "Ensure the Assessment form uses a step-by-step wizard UI rather than a massive single-page form to reduce cognitive load.",
+    "Use Recharts RadarChart to visualize the Skill Gap Analysis.",
+    "For the AI Explanation section, implement a typewriter effect or a soft glow border to signify 'AI thinking'.",
+    "Admin Panel should be dense and functional, using the 'Control Room' grid (Mode B).",
+    "Include a prominent PDF export button on the Recommendations dashboard.",
+    "Apply backdrop-blur to sticky headers and modal overlays.",
+    "Ensure all Grid children are direct descendants, or use subgrid if nesting is unavoidable.",
+    "Do NOT use Space Grotesk font.",
+    "Do NOT use Teal (#1B93A4) or Purple (#7351B7).",
+    "Add 'data-testid' to all buttons, links, and forms for testing."
+  ]
+}
